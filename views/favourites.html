@@ -1,0 +1,16 @@
+<!doctype HTML>
+<html>
+  <head><title>Movie Picker</title></head>
+  <body>
+     <form action="/favourites" method="POST">
+        <p>Which is your favorite movie?</p>
+        {% for movie in movies %}
+          <p>
+            <input type="radio" name="movie" value="{{movie.title}}"/>{{movie.title}}
+          </p>
+        {% endfor %}
+        <input type="submit" value="Submit"/>
+     </form>
+  </body>
+</html>
+
